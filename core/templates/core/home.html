@@ -1,11 +1,35 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Connectify</title>
+     <link rel="stylesheet" href="{% static 'css/home.css' %}">
 </head>
 <body>
-    
-</body>
+    <header class="container">
+      <a href="#" class="logo">Logo</a>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Product</a>
+        <ul class="dropdown">
+          <li><a href="#">Chat with PDF</a></li>
+          <li><a href="#">Chat with GPT</a></li>
+        </ul></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Team</a></li>
+      </ul>
+    </header>
+    <!-- <section class="banner"></section> -->
+    <div class="banner">
+    </div>
+    <script type="text/javascript">
+      window.addEventListener("scroll", function(){
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky",window.scrollY >0);
+      })
+    </script>
+  </body>
 </html>

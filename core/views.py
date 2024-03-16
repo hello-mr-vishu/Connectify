@@ -19,7 +19,7 @@ def ChatPDF(request):
                 pdf.delete()
             form.save()
         else:
-            return(request,"core/base.html",{"form":form})
+            return render(request,"core/base.html",{"form":form})
     context={'form':PdfForm(),"text":""}
     if request.method == 'GET':
         query=request.GET.get("data")
